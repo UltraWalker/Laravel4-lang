@@ -1,93 +1,65 @@
-Laravel4-lang
-=============
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/caouecs/laravel4-lang/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+# Laravel-lang
 
-In this repository, you can find the lang files for the framework PHP, [Laravel 4](http://www.laravel.com).
+[![Stories in Ready](https://badge.waffle.io/caouecs/Laravel-lang.svg)](http://waffle.io/caouecs/Laravel-lang)
 
-Find more informations on http://caouecs.github.io/Laravel4-lang/
+In this repository, you can find the lang files for the framework PHP, [Laravel 4&5](http://www.laravel.com).
 
+## Install
 
-Laravel 4.0
----
+#### Via Composer
+* For Laravel 5.* : run `composer require caouecs/laravel-lang:~3.0` in your project folder
+* For Laravel 5 : run `composer require caouecs/laravel-lang:~2.0` in your project folder
+* For Laravel 4 : run `composer require caouecs/laravel-lang:~1.0` in your project folder
+* Files of languages are in "vendor/caouecs/laravel-lang" directory
+* Copy the folders of languages that you want, in the *resources/lang* folder of your Laravel application (*app/lang* in Laravel 4).
 
-We need your help to finish to translate `validation.php` file with array elements.
+#### Via GitHub
 
-You can follow translations in the issue [#73](https://github.com/caouecs/Laravel4-lang/issues/73).
+* Clone the [GitHub repository](https://github.com/caouecs/laravel-lang/) : *git clone https://github.com/caouecs/Laravel-lang.git*
+* Or download the [zip file](https://github.com/caouecs/laravel-lang/archive/master.zip)
+* Choose the branch:
+    * `laravel4` for Laravel4 project
+    * `master` for Laravel5 project
+* Copy the folders of languages that you want, in *resources/lang* folder of your Laravel application (*app/lang* in Laravel 4).
 
-Laravel 4.1
----
+#### Via SVN
 
-### Password reminder sent
+Run this in your project directory:
 
-To be ready for the new version of Laravel, we need your help. In `reminders.php` file, a new line has been added :
+```sh
+# Laravel 5:
+svn export https://github.com/caouecs/Laravel-lang/trunk/src/[language-code] resources/lang/[language-code]
 
-    "sent" => "Password reminder sent!",
+# Laravel 4:
+svn export https://github.com/caouecs/Laravel-lang/branches/laravel4/[language-code] app/lang/[language-code]
+```
 
-You can follow translations in the issue [#137](https://github.com/caouecs/Laravel4-lang/issues/137).
+Replace `[language-code]` by any of the languages listed [here](src).
 
-### Required without all
+## Usage [Laravel only]
 
-In `validation.php` file, a new line has been added :
+In the file *config/app.php*, change the value of *locale* by the short name of your language (*app/config/app.php* in Laravel 4).
 
-    "required_without_all" => "The :attribute field is required when none of :values are present."
+## Change log
 
-You can follow translations in the issue [#172](https://github.com/caouecs/Laravel4-lang/issues/172).
+Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
 
-### Validation email
+## Contributing
 
-In `validation.php` file, the text for email has beed updated :
+Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
-    "email" => "The :attribute must be a valid email address."
+## Status of files
 
-You can follow translations in the issue [#187](https://github.com/caouecs/Laravel4-lang/issues/187).
+* Check the [todo.md](todo.md) file to see the missing translations.
 
-### Required with all
+## Projects based on this package
 
-In `validation.php` file, a new line has beed added :
+* [LaravelLang by ARCANEDEV](https://github.com/ARCANEDEV/LaravelLang) - Translations manager and checker for Laravel 5.
+* [Laravel-lang by overtrue](https://github.com/overtrue/laravel-lang) - Command to add languages in your project.
+* [laravel-lang-installer by ablunier](https://github.com/ablunier/laravel-lang-installer) - Command for easily add languages to a Laravel project.
+* [laravel-lang-publisher by Andrey Helldar](https://github.com/andrey-helldar/laravel-lang-publisher) - Easy installation and update of translation files for your project.
 
-    "required_with_all" => "The :attribute field is required when :values is present."
+## Credits
 
-You can follow translations in the issue [#193](https://github.com/caouecs/Laravel4-lang/issues/193).
-
----
-
-How add languages in my app ?
----
-
-### Installation by GitHub
-
- * Clone the [GitHub repository](https://github.com/caouecs/Laravel4-lang/) : *git clone https://github.com/caouecs/Laravel4-lang.git*
- * Or download the [zip file](https://github.com/caouecs/Laravel4-lang/archive/master.zip)
- * Copy the folders of languages that you want, in *app/lang* folder of your application Laravel
-
-
-### Installation by Composer
-
- * Add *"caouecs/laravel4-lang": "dev-master"* in your `composer.json` in "require" or run *composer require caouecs/laravel4-lang*
- * Do "composer update"
- * Files of languages are in "vendor/caouecs/laravel4-lang" directory
- * Copy the folders of languages that you want, in *app/lang* folder of your application Laravel
-
-
-### Language by default in your app
-
-In the file *app/config/app.php*, change the value of *language* by the short name of your language.
-
----
-
-How can I add a language in this project ?
----
-
-* fork this repository
-* create a directory with the short name of the language (ex: fr for French) from ISO-639-1 ( see [Wikipedia](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) )
-* copy this three files of the english version with your translate
-    * for [Laravel](https://github.com/laravel/laravel/tree/master/app/lang/en)
-* add a pull request with the name of the language
-
-
-How can I fix a file ?
----
-
-* fork this repository
-* update the file
-* add a pull request with the name of the language
+- [caouecs](https://github.com/caouecs)
+- [All Contributors](https://github.com/caouecs/Laravel-lang/graphs/contributors)
